@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
 
 \usepackage{amsmath}
@@ -12,19 +12,46 @@
 \usepackage{fontspec}
 
 
-\setmainfont{Ryman Eco}
+\setmainfont{Ryman Eco}[AutoFakeBold=1]
+
+
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}
+\theoremstyle{definition}
+\newtheorem{defi}{Definición}
+\theoremstyle{plain}
+\newtheorem{prop}{Proposición}
+\theoremstyle{plain}
+\newtheorem{lem}{Lema}
+\theoremstyle{plain}
+\newtheorem{coro}{Corolario}
+\theoremstyle{remark}
+\newtheorem*{demo}{Demostración}
+\theoremstyle{remark}
+\newtheorem{ejm}{Ejemplo}
+
 
 
 \begin{document}
 
 \begin{center}
-    \textbf{Preliminares}
+    {\large \textbf{Preliminares}}
 \end{center}
 
+\begin{defi}[Conjunto Directo]
+Sea $L$ una retícula.\par 
+Decimos que $\left\{c_i\mid i\in I\right\}\subseteq L$ es un conjunto directo si para todo $i,j\in I$ existe $k\in I$ tal que $c_i\vee c_j\leq c_k$.
+\end{defi}
 
+\begin{defi}[Compacto]
+Sea $L$ una retícula.\par 
+Decimos que $fin L$ es compacto si siempre que $f\leq\bigvee S$, para algún conjunto directo $S\subseteq L$, entonces existe un $x\in S$ tal que $f\leq x$.
+\end{defi}
 
-
-
+\begin{defi}[Compactamente Generada]
+Sea $L$ una reticula completa.\par 
+Decimos que $L$ es compactamente generada si para todo $c\in L$ existe un conjunto $S=\left\{s\in L\mid s\text{ es compacto }\right\}\subseteq L$ y $c=\bigvee S$
+\end{defi}
 
 
 
