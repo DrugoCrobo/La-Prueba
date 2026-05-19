@@ -13,9 +13,18 @@
 \usepackage{fontspec}
 \usepackage{xfrac}
 \usepackage{setspace} %Espaciado entre lineaas
+%\usepackage{atveryend} %Poder agregar una pagina en blanco al final del documento
+
 
 \setmainfont{Ryman Eco}[AutoFakeBold=1]
 \onehalfspacing %Tener el espaciado estandar
+
+%\AtVeryEndDocument{
+%  \clearpage                  % Envía todo el contenido pendiente a su página
+%  \thispagestyle{empty}       % Quita el número de página de esta última hoja
+%  \hbox{}                     % Crea un elemento invisible para que LaTeX no ignore la página
+%  \clearpage                  % Fuerza la creación de la página en blanco
+%}
 
 \theoremstyle{plain}
 \newtheorem{teo}{Teorema}
@@ -125,8 +134,23 @@ Decimos que $c$ es cerrado si no tienes extenciones esenciales propias, es decir
 
 Obs: al conjunto de los cerrados los denotamos como $C\left(L\right)$.
 
+\begin{defi}[Uniforme]
+Sean $L$ una retícula y $a\in L\setminus\left\{0\right\}$.\par
+Decimos que $a$ es uniforme si para cualesquiera $x,y\in\sfrac{a}{0}$ mayores que $0$, se tiene que $0<x\wedge y$.
+\end{defi}
 
-\newpage
+\begin{defi}[Dimensión Uniforme o de Goldie]
+Sea $L$ una retícula.\par
+Decimos que $L$ tiene dimensión uniforme si existe una familia $\left\{a_1,\dots, a_n\right\}$ independiente cuyos elementos son uniformes $\bigvee\limits^n_{i-1}a_i$ es esencial en $L$.
+\end{defi}
+
+Obs: a la familia $\left\{a_1,\dots, a_n\right\}$ le llamaremos conjunto de Goldie.\par
+Obs: a la dimensión uniforme de $L$ la denotamos como $u-dim\left(L\right)=n$.
+
+\begin{defi}[Artiniana]
+Sea $L$ una retícula.\par
+Decimos que $L$ es artiniana si satisface la condición de cadena descendente sobre sus elementos.
+\end{defi}
 
 
 
@@ -142,6 +166,7 @@ Obs: al conjunto de los cerrados los denotamos como $C\left(L\right)$.
 
 
 
+\clearpage
 
 
 \end{document}
