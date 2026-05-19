@@ -12,9 +12,10 @@
 \usepackage[margin=2.54cm]{geometry}
 \usepackage{fontspec}
 \usepackage{xfrac}
+\usepackage{setspace} %Espaciado entre lineaas
 
 \setmainfont{Ryman Eco}[AutoFakeBold=1]
-
+\onehalfspacing %Tener el espaciado estandar
 
 \theoremstyle{plain}
 \newtheorem{teo}{Teorema}
@@ -60,13 +61,72 @@ Una retícula $L$ es noetheriana si satisface la condición de cadena ascendente
 
 Obs: Una cadea ascendente es de la forma $a_1\leq a_2\leq a_3\leq\dots$.\par
 
-\begin{defi}
-Sea $L$ una retícula. Los ideales principales son $(a]=\sfrac{a}{0}=\left\{x\in L\mid x\leq a\right\}$
+\begin{defi}[Ideal]
+Sea $L$ una retícula y $I\subseteq L$. Decimos que $I$ es un ideal si
+\begin{enumerate}
+    \item Para todo $x,y\in I$ se tiene que $x\vee y\in I$
+    \item Sean $t\in L$ y $x\in I$ si $t\leq x$ entonces $t\in I$
+\end{enumerate}
 \end{defi}
 
+Obs: Denotamos por $I\left(L\right)$ el conjunto de todos los ideales de $L$. Junto con la relación de inclusión de conjuntos, este es una retícula completa.
+
+\begin{defi}[Ideal Principal]
+Sea $L$ una retícula y $a\in L$.\par 
+El conjunto de todas las cotas inferiores de $a$ es un ideal particular llamdo el ideal principal y se denotan $(a]=\sfrac{a}{0}=\left\{x\in L\mid x\leq a\right\}$.
+\end{defi}
+
+\begin{defi}[Esencial]
+Sea $L$ una retícula con $0$ y $1$.\par
+Un elemento $e\in L$ es esencial si para todo $x\in L$ distinto del $0$ se tiene que $e\wedge x\neq 0$
+\end{defi}
+
+Obs: El conjunto de todos los elementos esenciales de $L$ lo denotamos por $E\left(L\right)$
+
+\begin{defi}[Zoclo]
+Sea $L$ una retícula con $0$.\par
+El supremo de todos los átomos en $L$ es llamado zoclo. Se denota $Zoc\left(L\right)$.
+\end{defi}
+
+\begin{defi}[Independiente]
+Sean $L$ una retícula y $S\subseteq L$ finito. Decimos que $S$ es independiente si para toda $a\in L$ se tiene que $a\wedge\bigvee\left(S\setminus \left\{a\right\}\right)=0$.
+\end{defi}
+
+Obs: Un subconjunto arbitrario de $L\setminus\left\{0\right\}$ es independiente si todos subconjuntos finitos son independientes.
+
+\begin{defi}[Modular]
+Sea $L$ una retícula.\par
+Decimos que $L$ es modular si para todo $a,b,c\in L$ con $b\leq a$ tenemos que $a\wedge\left(b\vee c\right)=b\vee\left(a\wedge c\right)$.
+\end{defi}
+
+\begin{defi}[Continua Superiormente]
+Sea $L$ una retícula.\par
+Decimos que $L$ es continua superiormente si para todo subconjunto directo $\left\{c_i\mid i\in I\right\}$ y $a\in L$ tenemos que $a\wedge\bigvee\limits_{i\in I} c_i=\bigvee\limits_{i\in I}\left(a\wedge c_i\right)$.
+\end{defi}
+
+\begin{defi}[Seudocomplemento]
+Sean $L$ una retícula con $0$ y $a\in L$.\par
+Decimos que $b\in L$ es un seudocomplemento de $a$ syss $b$ es máximo en el conjunto $\left\{c\in L\mid c\wedge a=0\right\}$.
+\end{defi}
+
+Obs: al conjunto de suedocomplementos lo denotamos $P\left(L\right)$.
+
+\begin{defi}[Extensión Esencial]
+Sean $L$ una retícula y $a,b\in L$.\par
+Si $a\leq b$ y $a$ es esencial en $\left[0,b\right]$, entonces decimos que $b$ es una extensión esencial de $a$ en $L$. Lo denotamos como $a<_e b$.
+\end{defi}
+
+Obs: otra forma de escribir la definición anterior: $b$ es una extensión esencial de $a$ syss $a\in E\left(\sfrac{b}{0}\right)$.
+
+\begin{defi}[Cerrado]
+Sean $L$ una retícula y $c\in L$.\par
+Decimos que $c$ es cerrado si no tienes extenciones esenciales propias, es decir, que el único elemento que puedo tomar mayor a él, es el propio $c$.
+\end{defi}
+
+Obs: al conjunto de los cerrados los denotamos como $C\left(L\right)$.
 
 
-
+\newpage
 
 
 
